@@ -17,7 +17,7 @@
   <div class="wrap">
     <a class="brand" href="./"><img src="icon.png" alt="">SplitMerge</a>
     <nav class="links"><a href="#araclar">Araçlar</a><a href="#neden">Neden SplitMerge</a><a href="#sss">SSS</a><a href="#destek">Destek</a></nav>
-    <a class="btn" href="app/">Uygulamayı aç</a>
+    <a class="btn" href="app/index.html">Uygulamayı aç</a>
   </div>
 </header>
 
@@ -28,7 +28,7 @@
       <h1>Tüm PDF işlerin <span>tek yerde</span></h1>
       <p class="lead">PDF birleştir, böl, küçült, imzala; Word, Excel, PowerPoint ve resimleri dönüştür. Dosyaların hiçbir sunucuya yüklenmez, her şey kendi cihazında yapılır.</p>
       <div class="cta-row">
-        <a class="btn big" href="app/">PDF araçlarını aç →</a>
+        <a class="btn big" href="app/index.html">PDF araçlarını aç →</a>
         <a class="btn big ghost" href="#araclar">Tüm araçlar</a>
       </div>
       <div class="ticks"><span>Dosyalar cihazında kalır</span><span>İnternetsiz çalışır</span><span>40'a yakın araç</span></div>
@@ -80,7 +80,7 @@
   <div class="wrap">
     <div class="band">
       <div><h2>Telefonda da yanında</h2><p>SplitMerge mobil uygulaması yakında App Store'da. Aynı araçlar, internetsiz.</p></div>
-      <a class="btn big" href="app/">Şimdi tarayıcıda dene</a>
+      <a class="btn big" href="app/index.html">Şimdi tarayıcıda dene</a>
     </div>
   </div>
 </section>
@@ -115,7 +115,7 @@
 <footer>
   <div class="wrap">
     <a class="brand" href="./" style="font-size:17px"><img src="icon.png" alt="" style="width:28px;height:28px">SplitMerge</a>
-    <a href="app/">Web uygulaması</a><a href="#araclar">Araçlar</a><a href="privacy.html">Gizlilik Politikası</a><a href="terms.html">Kullanım Şartları</a><a href="#destek">İletişim</a>
+    <a href="app/index.html">Web uygulaması</a><a href="#araclar">Araçlar</a><a href="privacy.html">Gizlilik Politikası</a><a href="terms.html">Kullanım Şartları</a><a href="#destek">İletişim</a>
     <span class="sp">© 2026 Harun Giçer</span>
   </div>
 </footer>
@@ -180,7 +180,7 @@ const T=[
 const svg=p=>'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>';
 const box=document.getElementById("tools"),fl=document.getElementById("filters");
 function show(c){
-  box.innerHTML=T.filter(t=>!c||t[1]==c).map(([id,k,n,d])=>`<a class="tool" href="app/#t/${id}" style="--c:${CC[k]}"><span class="ic">${svg(IC[k])}</span><b>${n}</b><small>${d}</small></a>`).join("");
+  box.innerHTML=T.filter(t=>!c||t[1]==c).map(([id,k,n,d])=>`<a class="tool" href="app/index.html#t/${id}" style="--c:${CC[k]}"><span class="ic">${svg(IC[k])}</span><b>${n}</b><small>${d}</small></a>`).join("");
   fl.querySelectorAll("button").forEach(b=>b.classList.toggle("on",b.dataset.c==(c||"")));
 }
 fl.innerHTML='<button data-c="">Tümü</button>'+CATS.filter(([k])=>T.some(t=>t[1]==k)).map(([k,n])=>`<button data-c="${k}">${n}</button>`).join("");
