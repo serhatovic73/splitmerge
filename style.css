@@ -74,7 +74,15 @@ section.alt{background:var(--bg2)}
 .band{background:linear-gradient(120deg,#543ee8,#823ae4);color:#fff;border-radius:28px;padding:48px;display:flex;gap:32px;align-items:center;justify-content:space-between;flex-wrap:wrap}
 .band h2{margin:0 0 8px;font-size:32px}
 .band p{margin:0;opacity:.9}
-.band .btn{background:#fff;color:#4b2fd6}
+.stores{display:flex;gap:12px;flex-wrap:wrap}
+.store{position:relative;display:flex;align-items:center;gap:10px;background:#0b0b12;color:#fff;text-decoration:none;padding:10px 20px 10px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.25);min-width:180px}
+.store:hover{background:#000}
+.store svg{width:28px;height:28px;flex:none}
+.store span{display:flex;flex-direction:column;font-weight:700;font-size:20px;line-height:1.1}
+.store small{font-weight:500;font-size:12px;opacity:.85}
+.store em{position:absolute;top:-9px;right:-8px;background:#fbbf24;color:#3b2a00;font-style:normal;font-weight:800;font-size:12px;padding:2px 8px;border-radius:999px}
+.store.soon{opacity:.75;cursor:default}
+.store.soon:hover{background:#0b0b12}
 
 /* SSS ve metin sayfaları */
 .faq{max-width:780px;margin:0 auto}
