@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>SplitMerge</title>
-<link rel="icon" href="icon.png"><link rel="apple-touch-icon" href="icon.png">
+<link rel="icon" href="../icon.png"><link rel="apple-touch-icon" href="../icon.png">
 <style>
 :root{--acc:var(--acc-l,#4f46e5);--on:#fff;--bg:#f5f6fa;--surface:#fff;--surface2:#eef0f6;--ink:#111827;--mut:#6b7280;--line:#e3e6ee;--ok:#059669;--err:#dc2626;--soft:#e9e8fd;--soft:color-mix(in srgb,var(--acc) 13%,var(--surface));--sat:env(safe-area-inset-top,0px);--sab:env(safe-area-inset-bottom,0px);--r:20px;color-scheme:light}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--acc:var(--acc-d,#a5b4fc);--on:#0b0d17;--bg:#0e111a;--surface:#171b27;--surface2:#212637;--ink:#eef0f6;--mut:#9aa3b5;--line:#2a3042;--ok:#34d399;--err:#f87171;--raise:#353c54;color-scheme:dark}}
@@ -963,7 +963,7 @@ function renderTabs(){$("#tabs").innerHTML=TABS.map(t=>`<button data-t="${t[0]}"
 renderTabs();
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",bars);
 document.addEventListener("keydown",e=>{if(e.key=="Escape")appBack()});
-history.replaceState({d:0,r:"home"},"","#home");route();setTimeout(libs,1500);
+{const r0=location.hash.slice(1);history.replaceState({d:0,r:"home"},"","#home");if(r0&&r0!="home")go(r0,true);else route()}setTimeout(libs,1500);
 </script>
 <script type="text/plain" id="pdfw">/**
  * @licstart The following is the entire license notice for the
